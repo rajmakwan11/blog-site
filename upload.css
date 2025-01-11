@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #f4afaf, #cfe98c);
+    color: #333;
+    /* padding: 20px; */
+}
+
+/* HEADER  */
+
+
+.header{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.head-contents-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80vw;
+}
+
+.head-contents-div button{
+    background-color: white;
+    padding: 0.1rem;
+    width:6rem;
+    border-radius: 0.5rem;
+
+}
+
+.header button:active{
+    background-color: aquamarine;
+    transform: scale(1.1);
+}
+
+.header .logo-div .logo{
+    width:10rem;
+}
+
+
+@media (max-width:350px){
+
+    .header .logo-div{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .header{
+        display: block;
+    }
+    .head-contents-div button{
+        margin-bottom: 1rem;
+    }
+    .head-contents-div{
+        margin-bottom: 2rem;
+        justify-content:center ;
+    }
+
+}
+
+
+/* HEADER ENDS  */
+
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #daf9fc;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+  
+.container .logo-div {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+}
+  
+.container .logo-div .logo {
+    max-width: 150px;
+}
+  
+.form-div {
+    padding: 20px;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+  
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #444;
+}
+  
+input[type="text"], input[type="file"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+   transition: 0.3s;
+}
+  
+#submit {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: white;
+    background: #fa7373;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+#submit:hover {
+    background: #0056b3;
+}
+  
+.dropdown-container {
+    position: relative;
+}
+  
+.dropdown-container select {
+    appearance: none;
+}
+  
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .form-group {
+      gap: 6px;
+    }
+  
+    #submit {
+      font-size: 14px;
+      padding: 12px;
+    }
+}
+  

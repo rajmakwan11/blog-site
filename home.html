@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="logo-div">
+            <img src="./images/logo.png" alt="" class="logo">
+        </div>
+        <div class="head-contents-div">
+            <button id="all">All</button>
+            <button id="first-interest">Coder Army</button>
+            <button id="second-interest">Hello</button>
+            <button id="third-interest">World</button>
+            <button id="fourth-interest">Php</button>
+            <button id="fifth-interest">JAVA</button>
+            
+        </div>
+        
+        <a href="./myblogs.html" id="see"> 
+            <div class="blogs-div">
+                <button id="my-blogs">My Blogs</button>
+            </div>
+        </a>
+
+    <a href="./notes.html" id="see2">
+         <div class="notes-div" id="notes">
+            <img src="./images/note-img2.png" alt="" class="notes-img">
+            <p class="notes">Notes</p>
+        </div>
+    </a>
+    </div>
+
+    <!-- HEADER ENDS  -->
+
+    <!-- TEXT EDITOR MAKING  -->
+
+    <div id="editor-container">
+        <div id="toolbar">
+            <button onclick="formatText('bold', this)">Bold</button>
+            <button onclick="formatText('italic', this)">Italic</button>
+            <button onclick="formatText('underline', this)">Underline</button>
+            <button onclick="formatText('insertOrderedList', this)">Numbered List</button>
+            <button onclick="formatText('insertUnorderedList', this)">Bullet List</button>
+            <button id="cancel" style="background-color: black; color: black;">❌</button>
+        </div>
+        <div id="editor" contenteditable="true">
+            Start writing your blog here...
+        </div>
+        <div class="editor-actions">
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- TEXT EDITOR ENDS  -->
+
+    <!-- BLOGS STARTS  -->
+
+    <div id="root-blogs">
+
+         <!-- <div class="blog1">
+            <div class="img-div">
+                <img src="./images/it1-img.webp" alt="" class="blog-img">
+            </div>
+            <div class="blog-content">
+                <h2 class="blog-title">Title : Latest News on a person</h2>
+                <p class="blog-para">The rapid advancement of technology has drastically altered the way we live, work, and interact with one another. From the rise of the internet and social media to the development of artificial intelligence, technological innovation has opened up new opportunities for businesses and individuals alike. While there are challenges, embracing these changes leads to progress and growth. READ MORE </p>
+                <p class="category">Category : Coder Army</p>
+            </div>
+        </div>  -->
+
+    </div> 
+
+    <!-- FIXED BUTTONS FOR TAKING NOTE AND CREATE BLOG  -->
+
+    <div class="button-div">
+        <button class="take-note-button" id="take-note">TAKE NOTE</button>
+        <a href="./upload.html"><button class="create-button">CREATE BLOG</button></a>
+    </div>
+
+
+    <!-- THIS BELOW SCRIPT IS FOR THE TEXT EDITOR  -->
+
+    <script>
+
+      function formatText(command, button) {
+    
+      document.execCommand(command, false, null);
+
+      document.querySelectorAll("#toolbar button").forEach(btn => btn.classList.remove("active"));
+
+      button.classList.add("active");
+    }
+
+    </script>
+      
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
